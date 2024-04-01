@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family, "Courie", sans-serif);
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: var(--background-image);
@@ -32,7 +32,6 @@
 
 .header {
   width: clamp(376px, 100%, 700px);
-  min-height: 368px;
   margin-top: 100px;
   margin-bottom: 100px;
   background-color: var(--background-color);
@@ -40,7 +39,7 @@
 }
 
 .logo {
-  font-family: "PressStrart2P";
+  font-family: "PressStrart2P", Arial, sans-serif;
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
   font-style: normal;
   font-variation-settings: "wght" var(--text-font-weight);
@@ -58,7 +57,7 @@
 
 .header-title {
   color: var(--accent-color, #000);
-  font-family: "PressStrart2P";
+  font-family: "PressStrart2P", Arial, sans-serif;
   font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
   font-style: normal;
   font-variation-settings: "wght" var(--text-font-weight);
@@ -74,6 +73,7 @@
 
   .logo {
     font-size: 49px;
+    padding-top: 0px;
   }
 
   .header-title {
@@ -81,13 +81,18 @@
   }
 }
 
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+}
+
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 7px;
   padding-left: 18px;
   padding-top: 20px;
+  padding-bottom: 24px;
 }
 
 .theme-menu__button {
@@ -95,7 +100,7 @@
   border: none;
   background-color: transparent;
   color: var(--accent-color, #000);
-  font-family: "PressStrart2P";
+  font-family: "PressStrart2P", Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-variation-settings: "wght" var(--text-font-weight);
@@ -189,7 +194,7 @@
   right: 25px;
   color: var(--accent-color, #000);
   text-shadow: 1px 0 0 var(--watermark-color, #FFF);
-  font-family: "PressStrart2P";
+  font-family: "PressStrart2P", Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: var(--text-font-weight, 400);
@@ -324,7 +329,7 @@
   inset: 0;
   left: 0;
   width: 100%;
-  background-color: var(--background-color, #fff);
+  background-color: var(--button-color, #fff);
   transform-origin: left;
   transform: scaleX(0);
   transition: transform ease-in-out 0.5s;
@@ -345,7 +350,7 @@
 
 .button__text {
   color: var(--accent-color, #000);
-  font-family: "PressStrart2P";
+  font-family: "PressStrart2P", Arial, sans-serif ;
   font-size: 14px;
   font-style: normal;
   font-variation-settings: "wght" var(--text-font-weight);
@@ -387,7 +392,7 @@
 .dialog[open] {
   width: 357px;
   padding: 30px;
-  font-family: "PressStrart2P";
+  font-family: "PressStrart2P", Arial, sans-serif;
   color: var(--accent-color, #000);
   background-color: var(--background-color, #fff);
   display: flex;
