@@ -17,7 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font-family, "Courie", sans-serif);
+  font-family: var(--main-font-family, "Arial", sans-serif);
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: var(--background-image);
@@ -121,19 +121,18 @@
   transform-origin: left;
   transform: scaleX(0);
   background-color: var(--accent-color,#000);
-  transition: width 0.3s ease;
-}
-
-.theme-menu__button:focus {
-  outline: none;
 }
 
 .theme-menu__button:focus-visible {
+  border: none;
   opacity: 0.6;
   color: var(--accent-color, #000);
 }
 
 .theme-menu__button:focus-visible::after {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  transition: width 0.3s ease;
   width: 100%;
   transform: scaleX(1);
 }
@@ -311,7 +310,8 @@
 
 .card__like-button {
   display: flex;
-  width: 130px;
+  /*Он в фигме не изменяется, при мобильной или версии лапа... Следовательно фиксированный*/
+  width: clamp(130px, 20%, 130px);
   padding: 10px 17px;
   justify-content: center;
   align-items: center;
@@ -381,6 +381,7 @@
 .svg-button {
   width: 20px;
   height: auto;
+  color: var(--accent-color);
 }
 
 @media (width<=375px){
